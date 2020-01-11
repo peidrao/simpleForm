@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/web/formulario_css.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container container-fluid">
+        <h1>Formulário de Cadastro</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nome</label>
+                    <input type="text" class="form-control" id="inputNome">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputName">Sobrenome</label>
+                    <input type="text" class="form-control" id="inputSobrenome">
+                </div>
+
+
+                <div class="form-group col-md-4">
+                    <label for="InputNascimento">Data de Nascimento</label>
+                    <input type="text" id="dataNascimento" maxlength="10" class="form-control" onkeypress="mascara('##/##/####', this)">
+                </div>
+
+
+                <div class="form-group col-md-4">
+                    <label for="inputSexo">Sexo</label>
+                        <select class="form-control" id="sexo" >
+                            <option value="">Selecione o sexo</option>
+                            <option value="Homem">Homem</option>
+                            <option value="Mulher">Mulher</option>
+                        </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                
+                <div class="form-group col-md-8">
+                    <label for="inputState">Estado</label>
+                    <select class="form-control" id="estado" onchange="buscaCidades(this.value)">
+                        <option value="">Selecione o estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="BA">Bahia</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="PR">Paraná</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="TO">Tocantins</option>
+                     </select>
+                     
+                    
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">Cidade</label>
+                    <select class="form-control" id="cidade">
+                        <option value="">Selecione a cidade</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    <label for="inputAddress">Rua / Aven.</label>
+                    <input type="text" class="form-control" id="inputEndereco" placeholder="Avenida dos Alagoanos">
+                </div>
+
+                <div class="form-group col-sm-3">
+                    <label for="inputAddress">Número</label>
+                    <input type="text" class="form-control" id="inputEnderecoNumero" placeholder="123">
+                </div>
+
+                <div class="form-group col-sm-3">
+                    <label for="inputAdress">CEP</label>
+                    <input type="text" maxlength="9" class="form-control" placeholder="59360-000" onkeypress="mascara('#####-###', this)">
+                </div>
+            </div>
+            <h1>Login</h1>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Senha</label>
+                    <input type="password"  data-toggle="password" class="form-control" id="inputPassword1" onkeyup="forcaSenha()">
+                    
+                    <small class="form-text text-muted" id="imprimirForcaSenha"> </small>
+                </div>
+
+                
+                    <div class="form-group col-md-6 col-6">
+                        <label for="inputPassword4">Confirme sua senha</label>
+                        <input type="password" data-toggle="password" class="form-control" id="inputPassword2" onkeyup="validarSenha()">
+                        <small class="form-text text-muted" id="senhasResultado"> </small>
+                    </div>
+                </div>
+            
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <button onclick="mostrarInformacoes()" class="btn btn-primary">Sign in</button>
+        </form>
+
+        
+    </div>
+
+<script src="/web/estados.js"></script>
+<script src="/web/funcoes.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+</body>
+
+</html>

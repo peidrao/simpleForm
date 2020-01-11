@@ -1,0 +1,26 @@
+h1 {
+    margin: auto;
+    color: rgb(39, 39, 114);
+}
+
+.container {
+    background-color: rgb(223, 193, 251);
+}
+
+.row {
+    background-color: aquamarine;
+}
+
+.campo1 {
+    float: left;
+}
+/*
+body{
+    padding:100px 0;
+    background-color:#efefef
+  }
+  a, a:hover{
+    color:#333
+  }
+
+*/
