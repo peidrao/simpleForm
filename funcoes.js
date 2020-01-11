@@ -56,7 +56,7 @@ function validarSenha() {
 }
 
 
-
+// Função ainda sem utilidade
 function mostrarInformacoes() {
     let nome = document.getElementById('inputNome').value
     let sobrenome = document.getElementById('inputSobrenome').value
