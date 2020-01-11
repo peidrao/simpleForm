@@ -28,4 +28,4 @@ Já em uma parte mais visual, e tendo uma relação direta com a aplicação pas
 Hoje em dia é de extrema importância que o usuário saiba o que está digitando, dessa forma foi implementado essa função, para mais uma vez facilitar a vida do usuário
 
 
-## by: Pedro Victor da Fonseca (@peidrao)
+## by: Pedro Victor da Fonseca [@peidrao](https://twitter.com/peidrao)
