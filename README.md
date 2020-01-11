@@ -10,11 +10,10 @@ Talvez seja uma informação fútil dependendo da usabilidade que for dada para 
 #### 2. Máscara que completa informações referentes a "códigos".
 
 Para quem gosta das coisas bem feitas, e gosta que o usuário tenha o mínimo de esforço ao digitar informações relacionadas a chave mais símbolos é uma boa opção de uso. Ora! Precisamos sempre facilitar a vida do usuário, sem precisar digitar outra coisa além de dos números. A máscara que estamos usando neste formulário é para CEP, contudo você pode usar para qualquer aplicação.
-
-[x] Identidade (RG)
-[x] CPF
-[x] Número de celular
-[x] Códigos no geral
+- [x] Identidade (RG)
+- [x] CPF
+- [x] Número de celular
+- [x] Códigos no geral
 
 #### 3. Verificar a força da senha
 
@@ -27,3 +26,6 @@ Já em uma parte mais visual, e tendo uma relação direta com a aplicação pas
 #### 5. Mostrar/Ocultar sua senha
 
 Hoje em dia é de extrema importância que o usuário saiba o que está digitando, dessa forma foi implementado essa função, para mais uma vez facilitar a vida do usuário
+
+
+## by: Pedro Victor da Fonseca (@peidrao)
