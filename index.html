@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulário</title>
-    <link rel="stylesheet" href="/css/formulario_css.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/formulario_css.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
@@ -28,22 +31,23 @@
 
                 <div class="form-group col-md-4">
                     <label for="InputNascimento">Data de Nascimento</label>
-                    <input type="text" id="dataNascimento" maxlength="10" class="form-control" onkeypress="mascara('##/##/####', this)">
+                    <input type="text" id="dataNascimento" maxlength="10" class="form-control"
+                        onkeypress="mascara('##/##/####', this)">
                 </div>
 
 
                 <div class="form-group col-md-4">
                     <label for="inputSexo">Sexo</label>
-                        <select class="form-control" id="sexo" >
-                            <option value="">Selecione o sexo</option>
-                            <option value="Homem">Homem</option>
-                            <option value="Mulher">Mulher</option>
-                        </select>
+                    <select class="form-control" id="sexo">
+                        <option value="">Selecione o sexo</option>
+                        <option value="Homem">Homem</option>
+                        <option value="Mulher">Mulher</option>
+                    </select>
                 </div>
             </div>
-            
+
             <div class="form-row">
-                
+
                 <div class="form-group col-md-8">
                     <label for="inputState">Estado</label>
                     <select class="form-control" id="estado" onchange="buscaCidades(this.value)">
@@ -73,8 +77,8 @@
                         <option value="SE">Sergipe</option>
                         <option value="SP">São Paulo</option>
                         <option value="TO">Tocantins</option>
-                     </select>
-                     
+                    </select>
+
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">Cidade</label>
@@ -97,48 +101,51 @@
 
                 <div class="form-group col-sm-3">
                     <label for="inputAdress">CEP</label>
-                    <input type="text" maxlength="9" class="form-control" placeholder="59360-000" onkeypress="mascara('#####-###', this)">
+                    <input type="text" maxlength="9" class="form-control" placeholder="59360-000"
+                        onkeypress="mascara('#####-###', this)">
                 </div>
             </div>
             <h1>Login</h1>
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <input type="email" class="form-control" id="inputEmail4" required> 
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Senha</label>
-                    <input type="password"  data-toggle="password" class="form-control" id="inputPassword1" onkeyup="forcaSenha()">
-                    
+                    <input type="password" data-toggle="password" class="form-control" id="inputPassword1"
+                        onkeyup="forcaSenha()" required>
+
                     <small class="form-text text-muted" id="imprimirForcaSenha"> </small>
                 </div>
 
-                
-                    <div class="form-group col-md-6 col-6">
-                        <label for="inputPassword4">Confirme sua senha</label>
-                        <input type="password" data-toggle="password" class="form-control" id="inputPassword2" onkeyup="validarSenha()">
-                        <small class="form-text text-muted" id="senhasResultado"> </small>
-                    </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Confirme sua senha</label>
+                    <input type="password" data-toggle="password" class="form-control" id="inputPassword2"
+                        onkeyup="validarSenha()" required>
+                    <small class="form-text text-muted" id="senhasResultado"> </small>
                 </div>
-            
+            </div>
+
             <div class="form-group">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
                     <label class="form-check-label" for="gridCheck">
-                        Check me out
+                        Confirme seus dados
                     </label>
                 </div>
             </div>
             <button onclick="mostrarInformacoes()" class="btn btn-primary">Sign in</button>
         </form>
 
-        
-    </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
-<script src="/js/estados.js"></script>
-<script src="/js/funcoes.js"></script>
+    </div>
+    <script src="js/estados.js"></script>
+    <script src="js/funcoes.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-// ESTE SERIA O CONTEÚDO DO .js https://gist.github.com/letanure/3012978
+// https://gist.github.com/letanure/3012978
 var json_cidades = {
     "estados": [
       {

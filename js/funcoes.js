@@ -54,17 +54,3 @@ function validarSenha() {
         document.getElementById('senhasResultado').innerHTML = `<b style="color: green"> Senhas iguais </b>` 
     }
 }
-
-
-// Função ainda sem utilidade
-function mostrarInformacoes() {
-    let nome = document.getElementById('inputNome').value
-    let sobrenome = document.getElementById('inputSobrenome').value
-    let dataNascimento = document.getElementById('dataNascimento').value
-    let sexo = document.getElementById('sexo').value
-    let estado = document.getElementById('estado').value
-    let cidade = document.getElementById('cidade').value
-    let endereco = document.getElementById('inputEndereco').value
-    let endercoNumero = document.getElementById('inputEnderecoNumero').value
-    //alert(`Estado: ${estado} - Cidade ${cidade}`)
-}
